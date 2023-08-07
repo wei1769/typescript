@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "/dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon ./dist/index.js",
+    "test": "rm -rf ./dist && tsc && node ./dist/index.js",
+    "start": "concurrently -r yarn:start:*"
+  }
+}
